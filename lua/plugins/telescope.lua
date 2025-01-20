@@ -41,15 +41,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
       --  All the info you're looking for is in `:help telescope.setup()`
       --
       defaults = {
-        layout_strategy = 'horizontal',
-        layout_config = {
-          horizontal = {
-            prompt_position = 'top',
-            width = { padding = 2 },
-            height = { padding = 2 },
-            preview_width = 0.5,
-          },
-        },
         sorting_strategy = 'ascending',
         path_display = { truncate = 3 },
       },
