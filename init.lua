@@ -44,6 +44,7 @@ require('lazy').setup({
   require 'plugins.telescope',
   require 'plugins.nvim-tree',
   require 'plugins.lazygit',
+  require 'plugins.gitsings',
 
   require 'plugins.lspconfig',
   require 'plugins.conform',
@@ -52,6 +53,7 @@ require('lazy').setup({
   require 'plugins.theme',
   require 'plugins.treesitter',
   require 'plugins.mini',
+  require 'plugins.render-markdown',
 
   require 'kickstart.plugins.autopairs',
 }, {
