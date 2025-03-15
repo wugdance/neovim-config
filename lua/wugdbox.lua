@@ -1,4 +1,6 @@
-ROOT = '/mnt/c/Users/aryabyshkin/vaults/wugdbox/'
+local tools = require 'tools'
+
+ROOT = tools.define_wugdbox_path()
 INBOX = ROOT .. '00-inbox/'
 TEMPLATES = ROOT .. '99-meta/templates/'
 INBOX_NOTE = TEMPLATES .. 'inbox_note.md'

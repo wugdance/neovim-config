@@ -99,7 +99,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
     end, { desc = '[S]earch [N]eovim files' })
 
     -- Wugdbox related keymaps
-    WUGDBOX_ROOT = '/mnt/c/Users/aryabyshkin/vaults/wugdbox/'
+    local tools = require 'tools'
+    WUGDBOX_ROOT = tools.define_wugdbox_path()
 
     -- Search file in wugdbox
     vim.keymap.set('n', '<leader>wsf', function()
