@@ -6,5 +6,5 @@ Config has some optional (but necessary for correct work of all plugins) depende
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install nodejs npm lua5.4 ripgrep fd-find -y
+sudo apt install nodejs npm lua5.4 ripgrep fd-find xclip -y
 ```
