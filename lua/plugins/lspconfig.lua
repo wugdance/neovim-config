@@ -1,4 +1,3 @@
--- LSP Plugins
 return {
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -147,6 +146,8 @@ return {
       local servers = {
         clangd = {},
         -- gopls = {},
+        -- pylyzer = {},
+        -- basedpyright = {},
         pyright = {
           settings = {
             python = {
@@ -159,25 +160,6 @@ return {
             },
           },
         },
-        -- pylsp = {
-        --   settings = {
-        --     plugins = {
-        --       black = { enabled = true },
-        --       autopep8 = { enabled = true },
-        --       yapf = { enabled = true },
-        --       -- linter options
-        --       pylint = { enabled = true, executable = 'pylint' },
-        --       pyflakes = { enabled = true },
-        --       pycodestyle = { enabled = true },
-        --       -- type checker
-        --       pylsp_mypy = { enabled = true },
-        --       -- auto-completion options
-        --       jedi_completion = { fuzzy = true },
-        --       -- import sorting
-        --       pyls_isort = { enabled = true },
-        --     },
-        --   },
-        -- },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --

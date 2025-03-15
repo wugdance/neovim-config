@@ -43,6 +43,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
       defaults = {
         sorting_strategy = 'ascending',
         path_display = { truncate = 3 },
+        layout_strategy = 'vertical',
       },
       -- pickers = {}
       extensions = {
