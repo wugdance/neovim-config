@@ -42,7 +42,8 @@ require('lazy').setup({
   require 'plugins.vim-test',
   require 'plugins.which-key',
   require 'plugins.telescope',
-  require 'plugins.nvim-tree',
+  require 'plugins.oil',
+  -- require 'plugins.nvim-tree',
   require 'plugins.lazygit',
   require 'plugins.gitsings',
 
