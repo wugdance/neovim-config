@@ -22,7 +22,10 @@ return { -- Collection of various small independent plugins/modules
     -- cursor location to LINE:COLUMN
     ---@diagnostic disable-next-line: duplicate-set-field
     statusline.section_location = function()
-      return '%2l:%-2v'
+      local current_line = vim.fn.line '.'
+      local total_lines = vim.fn.line '$'
+      local scroll_percent = math.floor((current_line / total_lines) * 100)
+      return '%2l:%-2v' .. string.format(' %d', scroll_percent) .. '%%'
     end
   end,
 }
