@@ -1,5 +1,4 @@
 -- TODO: Config statusline.
--- todo: config netrw
 -- TODO: Add text case convertaion mappings.
 
 -- Set <space> as the leader key
@@ -13,7 +12,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- Python Configutaion
 vim.g.python3_host_prog = '/usr/bin/python3'
@@ -29,7 +28,6 @@ vim.diagnostic.config {
 }
 
 require 'options'
-require 'netrw'
 require 'keymaps'
 require 'wugdbox'
 require 'autocmd'
@@ -43,7 +41,6 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.telescope',
   require 'plugins.oil',
-  -- require 'plugins.nvim-tree',
   require 'plugins.lazygit',
   require 'plugins.gitsings',
 
@@ -56,7 +53,7 @@ require('lazy').setup({
   require 'plugins.mini',
   require 'plugins.render-markdown',
 
-  require 'kickstart.plugins.autopairs',
+  require 'plugins.autopairs',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
