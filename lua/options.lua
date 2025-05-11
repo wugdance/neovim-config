@@ -64,6 +64,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 vim.opt.langmap = table.concat({
+  -- Cyrillic → Latin letters
   'йq',
   'цw',
   'уe',
@@ -116,4 +117,12 @@ vim.opt.langmap = table.concat({
   'ИB',
   'ТN',
   'ЬM',
+
+  -- Special symbols mappings
+  'ж\\;',
+  'э\\:',
+  'б\\,',
+  'ю\\.',
+  '/\\?',
+  '\\?/',
 }, ',')
