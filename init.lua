@@ -31,6 +31,7 @@ require 'options'
 require 'keymaps'
 require 'wugdbox'
 require 'autocmd'
+require 'commands'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-bootstrap'
