@@ -1,4 +1,3 @@
--- TODO: Config statusline.
 -- TODO: Add text case convertaion mappings.
 
 -- Set <space> as the leader key

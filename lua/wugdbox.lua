@@ -9,9 +9,8 @@ local function gen_title()
   return os.date '%Y%m%d%H%M'
 end
 
-local function replace_placeholders(title, content)
+local function replace_placeholders(content)
   content = string.gsub(content, '{{date}}', os.date '%Y-%m-%d')
-  content = string.gsub(content, '{{title}}', title)
   return content
 end
 
@@ -44,7 +43,7 @@ local function cun()
   local title = gen_title()
   local filename = INBOX .. title .. '.md'
   local content = get_template_content()
-  content = replace_placeholders(title, content)
+  content = replace_placeholders(content)
   create_file(filename, content)
   vim.cmd('edit ' .. filename)
 end

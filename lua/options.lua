@@ -11,7 +11,7 @@ vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+-- vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -23,6 +23,16 @@ vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
+
+vim.opt.laststatus = 2 -- Always show the status line
+
+-- Set the status line in one go
+-- %f -> file name
+-- %m -> mode
+-- %r -> readonly flag
+-- %l:%L -> line number:total lines
+-- %p%% -> percentage of the file
+vim.opt.statusline = '%f %m %r%=%l:%L %p%%'
 
 -- Enable break indent
 vim.opt.breakindent = true
