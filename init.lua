@@ -38,10 +38,8 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   require 'plugins.nvim-tmux-navigation',
   require 'plugins.vim-test',
-  require 'plugins.which-key',
   require 'plugins.telescope',
   require 'plugins.oil',
-  require 'plugins.lazygit',
   require 'plugins.gitsings',
 
   require 'plugins.lspconfig',
