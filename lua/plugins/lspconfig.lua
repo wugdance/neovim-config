@@ -152,8 +152,9 @@ return {
           settings = {
             python = {
               analysis = {
+                autoSearchPaths = true,
                 diagnosticSeverityOverrides = {
-                  -- Doesn't work properly
+                  reportOptionalMemberAccess = 'none',
                   reportCallIssue = 'none',
                 },
               },
@@ -193,6 +194,7 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'pyright',
         'stylua', -- Used to format Lua code
         'isort', -- python import sorting
         'black', -- python code formatter
