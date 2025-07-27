@@ -32,6 +32,22 @@ return {
       -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
       -- and elegantly composed help section, `:help lsp-vs-treesitter`
 
+      -- Apply rounded borders to all LSP floating windows
+      local border = 'rounded'
+
+      -- Patch open_floating_preview globally (covers hover, LspInfo, etc.)
+      local orig_util = vim.lsp.util.open_floating_preview
+      vim.lsp.util.open_floating_preview = function(contents, syntax, opts, ...)
+        opts = opts or {}
+        opts.border = opts.border or border
+        return orig_util(contents, syntax, opts, ...)
+      end
+
+      -- Diagnostic float borders (e.g., :lua vim.diagnostic.open_float())
+      vim.diagnostic.config {
+        float = { border = border },
+      }
+
       --  This function gets run when an LSP attaches to a particular buffer.
       --    That is to say, every time a new file is opened that is associated with
       --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
