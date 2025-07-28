@@ -1,5 +1,4 @@
--- TODO: Add text case convertaion mappings.
-
+vim.keymap.set({ 'n', 'v', 'o' }, '<Space>', '<Nop>', { silent = true })
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -51,7 +50,6 @@ require('lazy').setup({
   require 'plugins.theme',
   require 'plugins.treesitter',
   require 'plugins.mini',
-
   require 'plugins.autopairs',
 }, {
   ui = {
