@@ -3,6 +3,7 @@
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
+vim.keymap.set({ 'n', 'v', 'o' }, '<Space>', '<Nop>', { silent = true, remap = false })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -41,6 +42,7 @@ require('lazy').setup({
   require 'plugins.telescope',
   require 'plugins.oil',
   require 'plugins.gitsings',
+  require 'plugins.undotree',
 
   require 'plugins.lspconfig',
   require 'plugins.conform',
@@ -49,7 +51,6 @@ require('lazy').setup({
   require 'plugins.theme',
   require 'plugins.treesitter',
   require 'plugins.mini',
-  require 'plugins.render-markdown',
 
   require 'plugins.autopairs',
 }, {

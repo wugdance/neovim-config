@@ -154,7 +154,6 @@ return {
               analysis = {
                 autoSearchPaths = true,
                 diagnosticSeverityOverrides = {
-                  reportOptionalMemberAccess = 'none',
                   reportCallIssue = 'none',
                 },
               },
