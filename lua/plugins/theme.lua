@@ -11,7 +11,6 @@ return {
         italic = false,
       },
     }
-
     vim.o.background = 'dark'
 
     vim.cmd.colorscheme 'rose-pine'
