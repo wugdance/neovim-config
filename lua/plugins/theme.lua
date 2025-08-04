@@ -5,6 +5,11 @@ return {
   init = function()
     require('rose-pine').setup {
       dark_variant = 'main',
+
+      styles = {
+        bold = false,
+        italic = false,
+      },
     }
 
     vim.o.background = 'dark'
