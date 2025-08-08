@@ -17,6 +17,8 @@ return {
         TelescopeResultsNormal = { fg = 'subtle', bg = 'none' },
         TelescopeSelection = { fg = 'text', bg = 'base' },
         TelescopeSelectionCaret = { fg = 'rose', bg = 'rose' },
+        FloatBorder = { fg = 'highlight_high', bg = 'none' },
+        NormalFloat = { bg = 'none' },
       },
     }
     vim.o.background = 'dark'
