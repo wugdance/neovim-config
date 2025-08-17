@@ -1,10 +1,28 @@
 return {
-  'mbbill/undotree',
-
+  'jiaoshijie/undotree',
+  dependencies = 'nvim-lua/plenary.nvim',
   config = function()
-    vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-    vim.g.undotree_ShortIndicators = 1
-    vim.g.undotree_SplitWidth = 40
-    vim.g.undotree_SetFocusWhenToggle = 1
+    require('undotree').setup {
+      float_diff = false, -- using float window previews diff, set this `true` will disable layout option
+      layout = 'left_left_bottom', -- "left_bottom", "left_left_bottom"
+      position = 'left', -- "right", "bottom"
+      ignore_filetype = { 'undotree', 'undotreeDiff', 'qf', 'TelescopePrompt', 'spectre_panel', 'tsplayground' },
+      window = {
+        winblend = 30,
+      },
+      keymaps = {
+        ['j'] = 'move_next',
+        ['k'] = 'move_prev',
+        ['gj'] = 'move2parent',
+        ['J'] = 'move_change_next',
+        ['K'] = 'move_change_prev',
+        ['<cr>'] = 'action_enter',
+        ['p'] = 'enter_diffbuf',
+        ['q'] = 'quit',
+      },
+    }
   end,
+  keys = { -- load the plugin only when using it's keybinding:
+    { '<leader>u', "<cmd>lua require('undotree').toggle()<cr>" },
+  },
 }
