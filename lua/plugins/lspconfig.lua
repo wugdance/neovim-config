@@ -134,15 +134,31 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
-        clangd = {},
-        pyright = {
+        -- clangd = {},
+        -- pyright = {
+        --   settings = {
+        --     python = {
+        --       analysis = {
+        --         autoSearchPaths = true,
+        --         diagnosticSeverityOverrides = {
+        --           reportCallIssue = 'none',
+        --         },
+        --       },
+        --     },
+        --   },
+        -- },
+        pylsp = {
           settings = {
-            python = {
-              analysis = {
-                autoSearchPaths = true,
-                diagnosticSeverityOverrides = {
-                  reportCallIssue = 'none',
-                },
+            pylsp = {
+              plugins = {
+                pyflakes = { enabled = false },
+                pycodestyle = { enabled = false },
+                autopep8 = { enabled = false },
+                yapf = { enabled = false },
+                mccabe = { enabled = false },
+                pylsp_mypy = { enabled = false },
+                pylsp_black = { enabled = false },
+                pylsp_isort = { enabled = false },
               },
             },
           },
@@ -178,10 +194,6 @@ return {
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
-            if server_name == 'pyright' then
-              print 'About to setup pyright with:'
-              print(vim.inspect(server.settings))
-            end
 
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
 
@@ -189,8 +201,6 @@ return {
           end,
         },
       }
-
-      require('lspconfig').pyright.setup(servers.pyright)
     end,
   },
 }
