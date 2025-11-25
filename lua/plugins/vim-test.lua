@@ -7,6 +7,6 @@ vim.keymap.set('n', '<leader>tv', ':TestVisit<CR>', { desc = '[T]est [V]isit' })
 
 vim.cmd "let test#strategy = 'vimux'"
 vim.cmd "let g:VimuxHeight = '30%'"
-vim.cmd "let test#python#pytest#options = '-s -v'"
+vim.cmd "let test#python#pytest#options = '-s -v --log-cli-level=DEBUG'"
 
 return { 'vim-test/vim-test', dependencies = { 'preservim/vimux' } }
